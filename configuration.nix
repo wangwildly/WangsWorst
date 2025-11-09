@@ -65,6 +65,9 @@ hardware = {
     };
     desktopManager.plasma6.enable = true;
     
+    # Add bluetooth service
+    blueman.enable = true; # GUI bluetooth manager
+
     # Audio
     pipewire = {
       enable = true;
@@ -80,6 +83,11 @@ hardware = {
     # Useful services
     fwupd.enable = true; # Firmware updates
     thermald.enable = true; # CPU thermal management
+  };
+
+  #Enable/Disable Kvantum Themes
+  environment.variables = {
+    QT_STYLE_OVERRIDE = "kvantum";
   };
 
   # === SECURITY ===
@@ -115,6 +123,7 @@ hardware = {
     # System tools
     htop
     fastfetch
+    alacritty
     
     # Development
     vscode
@@ -123,12 +132,23 @@ hardware = {
     # Gaming
     mangohud
     goverlay
+    heroic
     
     # Desktop apps
     discord
     kdePackages.partitionmanager
     kdePackages.kate
-    
+    google-chrome
+
+    #Kvantum Theme Manager
+    libsForQt5.qtstyleplugin-kvantum  # For Qt5 apps
+    qt6Packages.qtstyleplugin-kvantum # For Qt6 apps (optional but recommended)
+    kvantum                           # The theme manager GUI
+
+    # Popular theme collections:
+    kvantum-themes    # Collection of various themes
+    materia-kde-theme # Includes Kvantum themes
+
     # System utilities
     usbutils
     pciutils
