@@ -36,6 +36,21 @@
   };
 
   # Adds udev rule for game devices
-  services.udev.packages = [ pkgs.game-devices-udev-rules ];
+  services.udev = {
+    packages = [ pkgs.game-devices-udev-rules ];
+
+    # Rules to give 'wheel' group access to Keychron devices
+    extraRules = ''
+      # === Keychron K4 HE ===
+      # VID=3434, PID=0e40
+      SUBSYSTEM=="usb", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="0e40", GROUP="wheel"
+     SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="0e40", GROUP="wheel"
+
+      # === Keychron M3 mini 8K ===
+      # VID=3434, PID=d051
+      SUBSYSTEM=="usb", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="d051", GROUP="wheel"
+      SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="d051", GROUP="wheel"
+    '';
+  };
 }
 
