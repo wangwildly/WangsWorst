@@ -8,10 +8,9 @@
       enable = true;
       wayland.enable = true;
     };
-    
+
     # Desktop Environment(s)
     desktopManager.plasma6.enable = true; # <-- KDE Plasma 6 Desktop Environment
-    desktopManager.gnome.enable = true; # <-- Gnome Desktop Environment
 
     # Add bluetooth service
     blueman.enable = true; # GUI bluetooth manager
