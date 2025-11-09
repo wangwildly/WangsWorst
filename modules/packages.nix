@@ -23,6 +23,7 @@
     pkgs.kdePackages.partitionmanager
     pkgs.kdePackages.kate
     pkgs.google-chrome
+    
 
     # Kvantum Theme Manager
     pkgs.libsForQt5.qtstyleplugin-kvantum

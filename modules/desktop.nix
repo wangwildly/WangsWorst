@@ -1,4 +1,4 @@
-# /etc/nixos/modules/hardware.nix
+# /etc/nixos/modules/desktop.nix
 { config, pkgs, ... }:
 
 {
