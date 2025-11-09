@@ -1,0 +1,11 @@
+# Hardware-specific file (don't share this)
+hardware-configuration.nix
+
+# Build results
+result
+result-*
+
+# Temporary files
+*.tmp
+*.swp
+*~
