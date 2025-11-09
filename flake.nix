@@ -22,13 +22,15 @@
         modules = [
           ./configuration.nix
           
-          # Uncomment when you're ready for home-manager
-          # home-manager.nixosModules.home-manager
-          # {
-          #   home-manager.useGlobalPkgs = true;
-          #   home-manager.useUserPackages = true;
-          #   home-manager.users.j = import ./home.nix;
-          # }
+          # This line imports the Home-Manager NixOS module
+          home-manager.nixosModules.home-manager
+          
+          # This block configures Home-Manager
+          {
+             home-manager.useGlobalPkgs = true;
+             home-manager.useUserPackages = true;
+             home-manager.users.j = import ./home.nix;
+           }
         ];
       };
     };

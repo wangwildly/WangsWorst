@@ -19,7 +19,6 @@
 
   # === SYSTEM-LEVEL PROGRAMS ===
   programs.dconf.enable = true; # Needed for some apps
-  programs.firefox.enable = true; # (Good to move to home-manager later)
 
   # === NIX SETTINGS ===
   nix = {

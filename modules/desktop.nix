@@ -8,8 +8,11 @@
       enable = true;
       wayland.enable = true;
     };
-    desktopManager.plasma6.enable = true;
     
+    # Desktop Environment(s)
+    desktopManager.plasma6.enable = true; # <-- KDE Plasma 6 Desktop Environment
+    desktopManager.gnome.enable = true; # <-- Gnome Desktop Environment
+
     # Add bluetooth service
     blueman.enable = true; # GUI bluetooth manager
 
@@ -25,11 +28,5 @@
     # === OTHER DESKTOP SERVICES ===
     printing.enable = true;
     flatpak.enable = true;
-  };
-
-  # === THEMING ===
-  # Kvantum environment variable
-  environment.variables = {
-    QT_STYLE_OVERRIDE = "kvantum";
   };
 }
