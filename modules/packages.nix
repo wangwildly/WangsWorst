@@ -27,7 +27,6 @@
     # Kvantum Theme Manager
     pkgs.libsForQt5.qtstyleplugin-kvantum
     pkgs.qt6Packages.qtstyleplugin-kvantum
-    pkgs.kvantum
 
     # Popular theme collections
     pkgs.kvantum-themes

@@ -31,7 +31,7 @@
 
   # === HARDWARE-RELATED SERVICES ===
   services = {
-    fuwpd.enable = true; # Firmware updates
+    fwupd.enable = true; # Firmware updates
     thermald.enable = true; # CPU thermal management
   };
 
