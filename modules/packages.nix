@@ -29,7 +29,6 @@
     pkgs.qt6Packages.qtstyleplugin-kvantum
 
     # Popular theme collections
-    pkgs.kvantum-themes
     pkgs.materia-kde-theme
 
     # System utilities
