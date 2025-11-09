@@ -10,7 +10,7 @@
     # Media players:
     pkgs.vlc
     pkgs.spotify
-    
+
     # Codecs (GStreamer plugins cover webm, mp4, etc.)
     pkgs.gstreamer-plugins-base
     pkgs.gstreamer-plugins-good
@@ -81,7 +81,7 @@
 
   # === THEMING ===
   # This sets Kvantum to handle QT Style instead of KDE
-  environment.variables = {
+  home.sessionVariables = {
     QT_STYLE_OVERRIDE = "kvantum";
   };
   
