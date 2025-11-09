@@ -12,10 +12,10 @@
     pkgs.spotify
 
     # Codecs (GStreamer plugins cover webm, mp4, etc.)
-    pkgs.gstreamer-plugins-base
-    pkgs.gstreamer-plugins-good
-    pkgs.gstreamer-plugins-bad
-    pkgs.gstreamer-plugins-ugly
+    pkgs.gst_plugins_base
+    pkgs.gst_plugins_good
+    pkgs.gst_plugins_bad
+    pkgs.gst_plugins_ugly
     pkgs.libde265 # For H.265 / HEVC
 
     # --- Packages moved from packages.nix ---
