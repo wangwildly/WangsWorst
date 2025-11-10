@@ -1,4 +1,18 @@
-outputs = { self, nixpkgs, home-manager, ... }: {
+{
+  description = "J's NixOS Configuration";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    
+    # Optional but recommended inputs for future expansion
+    home-manager = {
+      url = "github:nix-community/home-manager/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+
+  outputs = { self, nixpkgs, home-manager, ... }: {
 
     # === NixOS Hosts ===
     nixosConfigurations = {
@@ -43,3 +57,4 @@ outputs = { self, nixpkgs, home-manager, ... }: {
     # ... Formatter should be here ...
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
   };
+}
