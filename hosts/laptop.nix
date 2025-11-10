@@ -19,4 +19,6 @@
 
   # Set laptop hostname
   networking.hostName = "laptop";
+
+  system.stateVersion = "25.05";
 }

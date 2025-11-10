@@ -21,5 +21,7 @@
   # Set desktop hostname (you'll need to update modules/network.nix)
   networking.hostName = "desktop";
 
+  system.stateVersion = "25.05";
+
   # Other machine-specific settings could go here
 }
