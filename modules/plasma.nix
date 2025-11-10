@@ -1,4 +1,4 @@
 { config, pkgs, ... }:
 {
-  services.desktopManager.plasma6.enable = true; # <-- Enables KDE Plasma 6
+  services.xserver.desktopManager.plasma6.enable = true; # <-- Enables KDE Plasma 6
 }
