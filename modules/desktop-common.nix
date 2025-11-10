@@ -1,4 +1,4 @@
-# /etc/nixos/modules/desktop.nix
+# /etc/nixos/modules/desktop-common.nix
 { config, pkgs, ... }:
 
 {
@@ -10,7 +10,8 @@
     };
 
     # Desktop Environment(s)
-    desktopManager.plasma6.enable = true; # <-- KDE Plasma 6 Desktop Environment
+    # desktopManager.plasma6.enable = true; # <-- KDE Plasma 6 Desktop Environment
+	#This is now handled by plasma.nix
 
     # Add bluetooth service
     blueman.enable = true; # GUI bluetooth manager
