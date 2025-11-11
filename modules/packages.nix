@@ -13,6 +13,9 @@
     pkgs.kdePackages.kdeconnect-kde
     pkgs.kdePackages.partitionmanager
 
+    #Deskflow
+    pkgs.deskflow
+
     #Installs git
     pkgs.git
 

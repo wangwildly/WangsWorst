@@ -2,14 +2,16 @@
 { config, pkgs, ... }:
 {
   services = {
-    # === DISPLAY & DESKTOP ===
-    xserver = {
-      enable = true;
-      displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
-      };
-    };
+  # === DISPLAY & DESKTOP ===
+
+  # XWayland and support for X-based apps
+  xserver.enable = true;
+
+  # SDDM
+  displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
 
     # GUI bluetooth manager
     blueman.enable = true; 
