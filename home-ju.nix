@@ -1,3 +1,5 @@
+# Laptop Home-Manager
+
 { config, pkgs, ... }:
 
 {
@@ -22,9 +24,11 @@
     # System tools
     pkgs.htop
     pkgs.fastfetch
-
+    pkgs.gnomeExtensions.gsconnect
+    
     # Development
-    # These are currently handled in user-level programs & config, so it manages dotfiles.
+    # These are currently handled in user-level programs & config, so it manages dotfiles
+    # Keeping here cause I am learning
     # pkgs.vscode
     # pkgs.git
 
@@ -36,6 +40,9 @@
 
     # Desktop apps
     pkgs.discord
+    pkgs.bottles
+    pkgs.bolt-launcher # <-- Jagex Launcher for Linux
+    pkgs.runelite # <-- Runelite
     # pkgs.kdePackages.partitionmanager
     # pkgs.kdePackages.kate
     # pkgs.google-chrome

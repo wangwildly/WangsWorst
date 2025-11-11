@@ -36,9 +36,11 @@
 
     # Desktop apps
     pkgs.discord
-    pkgs.kdePackages.partitionmanager
-    pkgs.kdePackages.kate
     pkgs.google-chrome
+    pkgs.bottles
+    pkgs.bolt-launcher
+    pkgs.runelite
+    pkgs.libsForQt5.kdeconnect-kde
   ];
 
   # === USER-LEVEL PROGRAMS & CONFIG ===
