@@ -9,7 +9,8 @@
     ../modules/network.nix # <-- networking.hostName needs to be reflected here
     ../modules/packages.nix
     ../modules/desktop-common.nix
-    ../modules/gnome.nix
+    ../modules/deepin.nix
+    # ../modules/gnome.nix
   ];
 
   networking.hostName = "laptop"; # <-- This needs to be reflected in network.nix
