@@ -11,7 +11,8 @@
 
     #KDE System Packages
     pkgs.kdePackages.kdeconnect-kde
-    pkgs.kdePackages.kdeGear
+    pkgs.kdePackages.kdeApplications
+    pkgs.kdePackages.kdeFrameworks
 
     #Installs git
     pkgs.git
