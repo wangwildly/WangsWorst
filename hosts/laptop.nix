@@ -15,7 +15,7 @@
   networking.hostName = "laptop"; # <-- This needs to be reflected in network.nix
 
   # === DOCK-SPECIFIC ===
-  services.logind.lidSwitchExternalPower = "ignore"; # Clamshell mode
+  # services.logind.lidSwitchExternalPower = "ignore"; # Clamshell mode
   services.hardware.bolt.enable = true; # Thunderbolt manager
   services.power-profiles-daemon.enable = true;
 
