@@ -11,8 +11,7 @@
 
     #KDE System Packages
     pkgs.kdePackages.kdeconnect-kde
-    pkgs.kdePackages.kdeApplications
-    pkgs.kdePackages.kdeFrameworks
+    pkgs.kdePackages.partitionmanager
 
     #Installs git
     pkgs.git
