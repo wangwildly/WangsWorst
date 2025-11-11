@@ -1,4 +1,5 @@
 # Laptop Home-Manager
+# Immense commentary for education
 
 { config, pkgs, ... }:
 
@@ -24,11 +25,11 @@
     # System tools
     pkgs.htop
     pkgs.fastfetch
-    pkgs.gnomeExtensions.gsconnect
-    
-    # Development
-    # These are currently handled in user-level programs & config, so it manages dotfiles
-    # Keeping here cause I am learning
+    pkgs.gnomeExtensions.gsconnect # <-- I think this just enables Gnome functionality, not actually 'kde connect'
+    pkgs.libsForQt5.kdeconnect-kde # <-- Adding this for test
+
+    # Development - Keeping these here and commented out for my education
+    # These are currently handled in user-level programs & config, so it manages dotfiles.
     # pkgs.vscode
     # pkgs.git
 
@@ -43,9 +44,9 @@
     pkgs.bottles
     pkgs.bolt-launcher # <-- Jagex Launcher for Linux
     pkgs.runelite # <-- Runelite
-    # pkgs.kdePackages.partitionmanager
-    # pkgs.kdePackages.kate
-    # pkgs.google-chrome
+    # pkgs.kdePackages.partitionmanager <-- This was broken, looking into it
+    # pkgs.kdePackages.kate <-- Option for someone else
+    # pkgs.google-chrome <-- In case
   ];
 
   # === USER-LEVEL PROGRAMS & CONFIG ===
@@ -58,7 +59,7 @@
     userEmail = "wangwetly@pm.me";
   };
   
-  # This installs VSCode and manages its extensions declaratively
+  # This installs VSCode and manages its extensions, can be done declaratively I guess
   programs.vscode = {
     enable = true;
   };
@@ -79,7 +80,7 @@
   programs.brave = {
     enable = true;
     # You can add extensions declaratively if you want, might look into this.
-    # For example:
+    # Example below provided by unhinged /b/ user
     # extensions = [
     #   { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
     #   { id = "nngceckbapebfimnlniiabkandclnoej"; } # Bitwarden

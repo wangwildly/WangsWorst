@@ -1,3 +1,6 @@
+# Desktop Home-Manager
+# Immense commentary for education
+
 { config, pkgs, ... }:
 
 {
@@ -23,7 +26,7 @@
     pkgs.htop
     pkgs.fastfetch
 
-    # Development
+    # Development - Keeping these here and commented out for my education
     # These are currently handled in user-level programs & config, so it manages dotfiles.
     # pkgs.vscode
     # pkgs.git
@@ -33,6 +36,10 @@
     pkgs.goverlay
     pkgs.heroic
     pkgs.protonup-qt
+    pkgs.lutris
+    pkgs.protonplus
+    pkgs.gamescope
+    pkgs.corefonts
 
     # Desktop apps
     pkgs.discord
@@ -44,7 +51,7 @@
   ];
 
   # === USER-LEVEL PROGRAMS & CONFIG ===
-  # This is where dotfiles and services are managed.
+  # Dotfiles and services are managed here
   
   # This installs git, and generates a ~/.gitconfig
   programs.git = {
@@ -53,7 +60,7 @@
     userEmail = "wangwetly@pm.me";
   };
   
-  # This installs VSCode and manages its extensions declaratively
+  # This installs VSCode and manages its extensions, can be done declaratively I guess
   programs.vscode = {
     enable = true;
   };
@@ -64,7 +71,7 @@
   # Librewolf 
   programs.librewolf = {
     enable = true;
-    # This is to manage settings
+    # This is to manage its settings
     settings = {
       "webgl.disabled" = true;
     };
@@ -74,7 +81,7 @@
   programs.brave = {
     enable = true;
     # You can add extensions declaratively if you want, might look into this.
-    # For example:
+    # Example below provided by unhinged /b/ user
     # extensions = [
     #   { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
     #   { id = "nngceckbapebfimnlniiabkandclnoej"; } # Bitwarden
