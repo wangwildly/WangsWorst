@@ -9,6 +9,10 @@
     pkgs.libsForQt5.qtstyleplugin-kvantum
     pkgs.qt6Packages.qtstyleplugin-kvantum
 
+    #KDE System Packages
+    pkgs.kdePackages.kdeconnect-kde
+    pkgs.kdePackages.kdeGear
+
     #Installs git
     pkgs.git
 

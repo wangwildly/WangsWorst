@@ -47,7 +47,6 @@
     pkgs.bottles
     pkgs.bolt-launcher
     pkgs.runelite
-    pkgs.libsForQt5.kdeconnect-kde
   ];
 
   # === USER-LEVEL PROGRAMS & CONFIG ===

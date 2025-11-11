@@ -44,9 +44,7 @@
     pkgs.bottles
     pkgs.bolt-launcher # <-- Jagex Launcher for Linux
     pkgs.runelite # <-- Runelite
-    # pkgs.kdePackages.partitionmanager <-- This was broken, looking into it
-    # pkgs.kdePackages.kate <-- Option for someone else
-    # pkgs.google-chrome <-- In case
+    # pkgs.google-chrome <-- Optional
   ];
 
   # === USER-LEVEL PROGRAMS & CONFIG ===
