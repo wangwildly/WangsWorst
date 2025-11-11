@@ -31,5 +31,4 @@
   };
     # ... Formatter should be here ...
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
-  };
 }
