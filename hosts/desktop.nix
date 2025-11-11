@@ -1,27 +1,26 @@
 # /etc/nixos/hosts/desktop.nix
+
 { config, pkgs, ... }:
 {
   imports = [
-    # Machine-specific hardware
     ./hardware-configuration-desktop.nix
-
-    # Shared modules
     ../modules/system.nix
     ../modules/hardware.nix
-    ../modules/network.nix
+    ../modules/network.nix # <-- Hostname needs to be reflected here
     ../modules/packages.nix
-    ../modules/users.nix
     ../modules/desktop-common.nix
-
-    # Desktop-specific modules
     ../modules/gaming.nix
     ../modules/plasma.nix
   ];
 
-  # Set desktop hostname (you'll need to update modules/network.nix)
-  networking.hostName = "desktop";
+  networking.hostName = "desktop"; # <-- Reflect changes in network.nix
+
+  # Define user 'j'
+  users.users.j = {
+    isNormalUser = true;
+    description = "j";
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "gamemode" ];
+  };
 
   system.stateVersion = "25.05";
-
-  # Other machine-specific settings could go here
 }

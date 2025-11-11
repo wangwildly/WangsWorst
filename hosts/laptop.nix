@@ -1,24 +1,25 @@
 # /etc/nixos/hosts/laptop.nix
+
 { config, pkgs, ... }:
 {
   imports = [
-    # Machine-specific hardware
     ./hardware-configuration-laptop.nix
-
-    # Shared modules
     ../modules/system.nix
     ../modules/hardware.nix
-    ../modules/network.nix
+    ../modules/network.nix # <-- networking.hostName needs to be reflected here
     ../modules/packages.nix
-    ../modules/users.nix
     ../modules/desktop-common.nix
-
-    # Laptop-specific modules
     ../modules/gnome.nix
   ];
 
-  # Set laptop hostname
-  networking.hostName = "laptop";
+  networking.hostName = "laptop"; # <-- This needs to be reflected in network.nix
+
+  # Define user 'ju'
+  users.users.ju = {
+    isNormalUser = true;
+    description = "ju";
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" ];
+  };
 
   system.stateVersion = "25.05";
 }

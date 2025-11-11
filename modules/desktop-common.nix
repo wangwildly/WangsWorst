@@ -1,9 +1,7 @@
 # /etc/nixos/modules/desktop-common.nix
 { config, pkgs, ... }:
-
 {
   services = {
-
     # === DISPLAY & DESKTOP ===
     xserver = {
       enable = true;
@@ -12,7 +10,7 @@
         wayland.enable = true;
       };
     };
-    
+
     # GUI bluetooth manager
     blueman.enable = true; 
 
@@ -24,7 +22,7 @@
       pulse.enable = true;
       wireplumber.enable = true;
     };
-    
+
     # === OTHER DESKTOP SERVICES ===
     printing.enable = true;
     flatpak.enable = true;

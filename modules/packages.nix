@@ -9,6 +9,9 @@
     pkgs.libsForQt5.qtstyleplugin-kvantum
     pkgs.qt6Packages.qtstyleplugin-kvantum
 
+    #Installs git
+    pkgs.git
+
     # Popular theme collections
     pkgs.materia-kde-theme
 
