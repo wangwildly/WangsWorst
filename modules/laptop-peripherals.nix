@@ -8,8 +8,6 @@
   environment.systemPackages = [
     pkgs.brlaser
     pkgs.brscan5
-    # Fucking thing...
-    pkgs.unfreePackages.brscan-skey    
   ];
 
   # Printing and network printer discovery
@@ -27,5 +25,9 @@
       userServices = true;
       workstation = true;
     };
+  };
+  services.scanbd = {
+    enable = true;
+    group = "scanner";
   };
 }
