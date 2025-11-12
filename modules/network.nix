@@ -8,5 +8,9 @@
     networkmanager.enable = true;
     # Enable firewall by default (security)
     firewall.enable = true;
+
+    # Deskflow
+     allowedTCPPorts = [ 24800 ];
+
   };
 }

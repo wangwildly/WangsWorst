@@ -24,7 +24,6 @@
     # System tools
     pkgs.htop
     pkgs.fastfetch
-    pkgs.libsForQt5.kdeconnect-kde
     pkgs.libsecret
     pkgs.onedrivegui
 
