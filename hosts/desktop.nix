@@ -11,6 +11,7 @@
     ../modules/desktop-common.nix
     ../modules/gaming.nix
     ../modules/plasma.nix
+    ../modules/wayfire.nix
   ];
 
   networking.hostName = "desktop"; # <-- Reflect changes in network.nix

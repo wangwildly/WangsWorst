@@ -21,12 +21,11 @@
     pkgs.gst_all_1.gst-plugins-ugly
     pkgs.libde265 # For H.265 / HEVC
 
-    # --- Packages moved from packages.nix ---
     # System tools
     pkgs.htop
     pkgs.fastfetch
-    pkgs.gnomeExtensions.gsconnect # <-- I think this just enables Gnome functionality, not actually 'kde connect'
-    pkgs.libsForQt5.kdeconnect-kde # <-- Adding this for test
+    pkgs.libsForQt5.kdeconnect-kde
+    pkgs.libsecret
 
     # Development - Keeping these here and commented out for my education
     # These are currently handled in user-level programs & config, so it manages dotfiles.
@@ -55,6 +54,7 @@
     enable = true;
     userName = "wangwildly-ju";
     userEmail = "wangwetly@pm.me";
+    credentialHelper = "libsecret";
   };
   
   # This installs VSCode and manages its extensions, can be done declaratively I guess
