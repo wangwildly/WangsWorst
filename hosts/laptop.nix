@@ -21,7 +21,7 @@
 
   # System-Wide scanning ability (add "scanner" to extraGroups to use this)
   hardware.sane.enable = true;
-  hardware.sane.extraBackends = [ pkgs.unfreePackages.brscan5 ];
+  hardware.sane.extraBackends = [ pkgs.brscan5 ];
 
   # Define user 'ju'
   users.users.ju = {
