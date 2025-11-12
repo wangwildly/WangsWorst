@@ -26,7 +26,6 @@
     pkgs.fastfetch
     pkgs.libsForQt5.kdeconnect-kde
     pkgs.libsecret
-    pkgs.light
 
     # Development - Keeping these here and commented out for my education
     # These are currently handled in user-level programs & config, so it manages dotfiles.
