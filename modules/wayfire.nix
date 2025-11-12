@@ -1,19 +1,21 @@
-# Wayfire Desktop Environment
-# Wayland Compositor, Tiling Window Manager, Works with SDDM
 
 { config, pkgs, ... }:
 
 {
-  # Enables Wayfire Compositor
-  programs.wayfire.enable = true;
+  # This one block handles the following:
+  # - Installs Wayfire
+  # - Automatically adds it to the SDDM session list
+  # - Wraps it with the plugins you list below
+  programs.wayfire = {
+    enable = true;
 
-  # Adds Wayfire to the SDDM session list
-  services.displayManager.sessionPackages = [ pkgs.wayfire ];
-
-  # Adds core 'wf-shell' plugin for the panel/background
-  #    and 'wcm' aka Wayfire Config Manager GUI
-  environment.systemPackages = [
-    pkgs.wf-shell
-    pkgs.wcm
-  ];
+    # This declaratively builds the "wrapped" package
+    # with specified plugins
+    plugins = with pkgs.wayfirePlugins; [
+      wcm       # The Wayfire Config Manager GUI
+      wf-shell  # The panel, background, etc.
+      # Add any more plugins here
+      # wayfire-plugins-extra
+    ];
+  };
 }
