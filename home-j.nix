@@ -57,7 +57,11 @@
     enable = true;
     userName = "wangwildly";
     userEmail = "wangwetly@pm.me";
-    credentialHelper = "libsecret";
+    
+    # Writes to .gitconfig file
+    config = {
+      credentialHelper = "libsecret"; # Saves git config
+    };
   };
   
   # This installs VSCode and manages its extensions, can be done declaratively I guess
