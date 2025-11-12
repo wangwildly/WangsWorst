@@ -95,8 +95,8 @@
   home.sessionVariables = {
    QT_STYLE_OVERRIDE = "kvantum";
   
-  
+  };
   # This just lets home-manager manage itself
   programs.home-manager.enable = true;
-  };
+  
 }
