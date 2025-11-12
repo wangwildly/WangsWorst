@@ -4,7 +4,7 @@
   environment.systemPackages = [
     pkgs.brlaser
     pkgs.brscan5
-    pkgs.brscan-skey    
+    pkgs.brscan_skey    
   ];
 
   # Printing and network printer discovery
@@ -14,7 +14,7 @@
   };
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
     publish = {
       enable = true;
       addresses = true;
