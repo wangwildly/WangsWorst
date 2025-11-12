@@ -1,10 +1,15 @@
 { config, pkgs, ... }:
 
 {
+  # Adding allow unfree here for proprietary driver
+  nixpkgs.config.allowUnfree = true;
+
+
   environment.systemPackages = [
     pkgs.brlaser
     pkgs.brscan5
-    pkgs.brscan_skey    
+    # Fucking thing...
+    pkgs.unfreePackages.brscan-skey    
   ];
 
   # Printing and network printer discovery
