@@ -56,8 +56,8 @@
     userEmail = "wangwetly@pm.me";
     
     # Writes to .gitconfig file
-    config = {
-      credentialHelper = "libsecret"; # Saves git config
+    extraConfig = {
+      credential.helper = "libsecret"; # Saves git config
     };
   };
   
