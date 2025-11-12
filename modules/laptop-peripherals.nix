@@ -4,8 +4,6 @@
   # Adding allow unfree here for proprietary driver
   nixpkgs.config.allowUnfree = true;
 
-hardware.scanbd.enable = true;
-
   environment.systemPackages = [
     pkgs.brlaser
     pkgs.brscan5
