@@ -89,12 +89,21 @@
     # ];
   };
 
+  # === One Drive ===
+  services.onedrive = {
+    enable = true;
+    # This is the folder in your home directory where it will sync.
+    # You can change the name "OneDrive" to "WorkFiles" or anything.
+    syncDir = "${config.home.homeDirectory}/OneDrive";
+  };
+
   # === THEMING ===
   # This sets Kvantum to handle QT Style instead of KDE
-  # home.sessionVariables = {
-   # QT_STYLE_OVERRIDE = "kvantum";
+  home.sessionVariables = {
+   QT_STYLE_OVERRIDE = "kvantum";
   
   
   # This just lets home-manager manage itself
   programs.home-manager.enable = true;
+  };
 }
