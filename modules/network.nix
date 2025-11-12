@@ -6,7 +6,7 @@
   networking = {
     # hostName = "nixos"; # <-- This is now handled by each machines respective host file
     networkmanager.enable = true;
-    # Enable firewall by default (security)
+    # Enable firewall by default
     firewall = {
       enable = true;
 

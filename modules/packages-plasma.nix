@@ -1,4 +1,5 @@
 # /etc/nixos/modules/packages.nix
+# *My* preferred packages for a base Plasma install
 { config, pkgs, ... }:
 
 {
