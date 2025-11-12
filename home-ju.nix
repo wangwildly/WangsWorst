@@ -26,6 +26,7 @@
     pkgs.fastfetch
     pkgs.libsForQt5.kdeconnect-kde
     pkgs.libsecret
+    pkgs.onedrivegui
 
     # Development - Keeping these here and commented out for my education
     # These are currently handled in user-level programs & config, so it manages dotfiles.
@@ -87,14 +88,6 @@
     #   { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
     #   { id = "nngceckbapebfimnlniiabkandclnoej"; } # Bitwarden
     # ];
-  };
-
-  # === One Drive ===
-  services.onedrive = {
-    enable = true;
-    # This is the folder in your home directory where it will sync.
-    # You can change the name "OneDrive" to "WorkFiles" or anything.
-    syncDir = "${config.home.homeDirectory}/OneDrive";
   };
 
   # === THEMING ===
