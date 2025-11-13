@@ -11,6 +11,7 @@
     ../modules/desktop-common.nix
     ../modules/plasma.nix
     ../modules/laptop-peripherals.nix
+    ../modules/wayfire.nix
   ];
 
   networking.hostName = "laptop"; # <-- This needs to be reflected in network.nix

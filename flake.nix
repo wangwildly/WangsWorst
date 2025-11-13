@@ -25,6 +25,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.j = import ./home-j.nix;
+            home-manager.backupFileExtension = "backup";
           }
         ];
       };
@@ -39,6 +40,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.ju = import ./home-ju.nix;
+            home-manager.backupFileExtension = "backup"; # Added for wayfire backup conflict
           }
         ];
       };
