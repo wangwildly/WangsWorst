@@ -4,7 +4,5 @@
   programs.wayfire.enable = true;
   services.displayManager.sessionPackages = [ pkgs.wayfire ];
 
-  # Enables hardware acceleration
-  # For all Wayfire sessions
-  environment.variables.WLR_RENDERER = "vulkan";
+
 }

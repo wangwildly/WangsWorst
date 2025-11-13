@@ -16,6 +16,10 @@
 
   networking.hostName = "desktop"; # <-- Reflect changes in network.nix
 
+  # Enables hardware acceleration
+  # For all Wayfire sessions
+  environment.variables.WLR_RENDERER = "vulkan";
+
   # Define user 'j'
   users.users.j = {
     isNormalUser = true;

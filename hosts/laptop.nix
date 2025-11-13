@@ -5,31 +5,32 @@
   imports = [
     ./hardware-configuration-laptop.nix
     ../modules/system.nix
-    ../modules/hardware.nix
     ../modules/network.nix # <-- networking.hostName needs to be reflected here
     ../modules/packages-plasma.nix
     ../modules/desktop-common.nix
-    ../modules/plasma.nix
     ../modules/laptop-peripherals.nix
+    ../optional/nvidia.nix
     ../modules/wayfire.nix
+    ../modules/plasma.nix
   ];
 
   networking.hostName = "laptop"; # <-- This needs to be reflected in network.nix
 
-xdg.portal = {
-    enable = true;
-    # Use the GTK portal, which is a good generic fallback
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  # === 3. CONFIGURE NVIDIA PRIME OFFLOAD ===
+  hardware.nvidia.prime = {
+    offload.enable = true;
+    # === USE YOUR BUS IDS FROM 'lspci' HERE ===
+    intelBusId = "PCI:00:02.0";    # (Example: 00:02.0)
+    nvidiaBusId = "PCI:01:00.0";   # (Example: 01:00.0)
   };
 
-
-  # Thunderbolt and power profile for Dock
-  services.hardware.bolt.enable = true; # Thunderbolt manager
+  # === 4. LAPTOP-SPECIFIC SETTINGS ===
+  services.logind.lidSwitchExternalPower = "ignore";
+  services.hardware.bolt.enable = true;
   services.power-profiles-daemon.enable = true;
-
-  # System-Wide scanning ability (add "scanner" to extraGroups to use this)
   hardware.sane.enable = true;
-  hardware.sane.extraBackends = [ pkgs.brscan5 ];
+  hardware.sane.extraBackends = [ pkgs.unfreePackages.brscan5 ];
+  hardware.scanbd.enable = true;
 
   # Define user 'ju'
   users.users.ju = {
