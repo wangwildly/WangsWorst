@@ -16,6 +16,15 @@
 
   networking.hostName = "laptop"; # <-- This needs to be reflected in network.nix
 
+  xdg.portal = {
+    enable = true;
+    # Tell it to use the 'wlr' backend for Wayfire/Sway
+    extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
+    # Explicitly set the default to 'wlr'
+    config.common.default = "*";
+  };
+
+
   # Thunderbolt and power profile for Dock
   services.hardware.bolt.enable = true; # Thunderbolt manager
   services.power-profiles-daemon.enable = true;
