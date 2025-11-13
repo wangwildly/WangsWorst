@@ -57,6 +57,17 @@
     # pkgs.google-chrome <-- Optional
   ];
 
+      # Wayfire config
+  xdg.configFile."wayfire.ini" = {
+  source = ./dotfiles/wayfire.ini;
+  };
+
+  # Waybar config & style
+  xdg.configFile."waybar" = {
+    source = ./dotfiles/waybar;
+    recursive = true; # This command will copy the entire folder
+  };
+
   # === USER-LEVEL PROGRAMS & CONFIG ===
   # This is where dotfiles and services are managed.
   
@@ -98,17 +109,6 @@
     #   { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
     #   { id = "nngceckbapebfimnlniiabkandclnoej"; } # Bitwarden
     # ];
-  };
-
-      # Wayfire config
-  xdg.configFile."wayfire.ini" = {
-  source = ./dotfiles/wayfire.ini;
-  };
-
-  # Waybar config & style
-  xdg.configFile."waybar" = {
-    source = ./dotfiles/waybar;
-    recursive = true; # This command will copy the entire folder
   };
 
   # === THEMING ===
