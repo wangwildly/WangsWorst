@@ -7,7 +7,7 @@
     ../modules/system.nix
     ../modules/hardware.nix
     ../modules/network.nix # <-- Hostname needs to be reflected here
-    ../modules/packages.nix
+    ../modules/packages-plasma.nix
     ../modules/desktop-common.nix
     ../modules/gaming.nix
     ../modules/plasma.nix

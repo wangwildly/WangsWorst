@@ -13,6 +13,7 @@
     # Media players:
     pkgs.vlc
     pkgs.spotify
+    pkgs.haruna
 
     # Codecs (GStreamer plugins cover webm, mp4, etc.)
     pkgs.gst_all_1.gst-plugins-base
