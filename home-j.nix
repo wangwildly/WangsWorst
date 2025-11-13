@@ -50,7 +50,7 @@
     pkgs.runelite
 
     # Hyperland-Specific
-    pkgs.hyperpaper # Wallpaper manager
+    pkgs.hyprpaper # Wallpaper manager
     pkgs.hypridle # Idle daemon
     pkgs.hyprlock # Lock screen
     pkgs.pyprland # Advanced features
