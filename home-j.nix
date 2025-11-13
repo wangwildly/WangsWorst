@@ -82,32 +82,32 @@
 
   # Dotfiles (Declaratively Linked)
   xdg.configFile."hypr" = {
-    source = ../dotfiles/hypr;
+    source = ./dotfiles/hypr;
     recursive = true;
   };
 
   xdg.configFile."waybar" = {
-    source = ../dotfiles/waybar;
+    source = ./dotfiles/waybar;
     recursive = true;
   };
 
   xdg.configFile."rofi" = {
-    source = ../dotfiles/rofi;
+    source = ./dotfiles/rofi;
     recursive = true;
   };
 
   xdg.configFile."fish" = {
-    source = ../dotfiles/fish;
+    source = ./dotfiles/fish;
     recursive = true;
   };
 
   xdg.configFile."kitty" = {
-    source = ../dotfiles/kitty;
+    source = ./dotfiles/kitty;
     recursive = true;
   };
 
   xdg.configFile."neofetch" = {
-    source = ../dotfiles/neofetch;
+    source = ./dotfiles/neofetch;
     recursive = true;
   };
 
