@@ -20,9 +20,10 @@
   hardware.nvidia.prime = {
     offload.enable = true;
     # === USE YOUR BUS IDS FROM 'lspci' HERE ===
-    intelBusId = "PCI:00:02.0";    # (Example: 00:02.0)
-    nvidiaBusId = "PCI:01:00.0";   # (Example: 01:00.0)
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
   };
+
 
   # === 4. LAPTOP-SPECIFIC SETTINGS ===
   services.logind.lidSwitchExternalPower = "ignore";
@@ -30,7 +31,6 @@
   services.power-profiles-daemon.enable = true;
   hardware.sane.enable = true;
   hardware.sane.extraBackends = [ pkgs.unfreePackages.brscan5 ];
-  hardware.scanbd.enable = true;
 
   # Define user 'ju'
   users.users.ju = {
