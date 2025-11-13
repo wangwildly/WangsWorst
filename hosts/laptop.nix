@@ -16,12 +16,10 @@
 
   networking.hostName = "laptop"; # <-- This needs to be reflected in network.nix
 
-  xdg.portal = {
+xdg.portal = {
     enable = true;
-    # Tell it to use the 'wlr' backend for Wayfire/Sway
-    extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
-    # Explicitly set the default to 'wlr'
-    config.common.default = "*";
+    # Use the GTK portal, which is a good generic fallback
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
 
