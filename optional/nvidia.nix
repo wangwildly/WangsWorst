@@ -4,7 +4,10 @@
 
 {
   # This allows proprietary NVIDIA drivers
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    nvidia.acceptEula = true;
+  };
 
   # This is for OpenGL and 32-bit support for Steam/Whatever
   hardware.opengl = {
@@ -17,9 +20,6 @@
 
   # Main NVIDIA driver settings
   hardware.nvidia = {
-    
-    # Automatically accept the EULA
-    acceptEula = true;
 
     # Enables Wayland/modern display support
     # This is crucial for Gnome/Plasma on Wayland
