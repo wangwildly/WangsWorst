@@ -32,10 +32,16 @@
     pkgs.p3x-onenote
     pkgs.simple-scan
 
+    # Wayfire Desktop apps
+    pkgs.kitty
+    pkgs.wofi
+    pkgs.waybar
+
     # Development - Keeping these here and commented out for my education
     # These are currently handled in user-level programs & config, so it manages dotfiles.
     # pkgs.vscode
     # pkgs.git
+    pkgs.neovim
 
     # Gaming
     # pkgs.mangohud
@@ -92,6 +98,17 @@
     #   { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
     #   { id = "nngceckbapebfimnlniiabkandclnoej"; } # Bitwarden
     # ];
+  };
+
+      # Wayfire config
+  xdg.configFile."wayfire.ini" = {
+  source = ./dotfiles/wayfire.ini;
+  };
+
+  # Waybar config & style
+  xdg.configFile."waybar" = {
+    source = ./dotfiles/waybar;
+    recursive = true; # This command will copy the entire folder
   };
 
   # === THEMING ===

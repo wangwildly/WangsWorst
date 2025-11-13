@@ -32,6 +32,11 @@
     # pkgs.vscode
     # pkgs.git
 
+    # Wayfire Desktop apps
+    pkgs.kitty
+    pkgs.wofi
+    pkgs.waybar
+
     # Gaming
     pkgs.mangohud
     pkgs.goverlay
@@ -92,6 +97,17 @@
     #   { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
     #   { id = "nngceckbapebfimnlniiabkandclnoej"; } # Bitwarden
     # ];
+  };
+
+    # Wayfire config
+  xdg.configFile."wayfire.ini" = {
+  source = ./dotfiles/wayfire.ini;
+  };
+
+  # Waybar config & style
+  xdg.configFile."waybar" = {
+    source = ./dotfiles/waybar;
+    recursive = true; # This command will copy the entire folder
   };
 
   # === THEMING ===
