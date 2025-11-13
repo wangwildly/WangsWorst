@@ -30,20 +30,6 @@
         ];
       };
 
-      # --- Laptop ---
-      laptop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit self; };
-        modules = [
-          ./hosts/laptop.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.ju = import ./home-ju.nix;
-            home-manager.backupFileExtension = "backup"; # Added for wayfire backup conflict
-          }
-        ];
-      };
     }; # Closes nixosConfigurations
 
     # === Formatter ===
