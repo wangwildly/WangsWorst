@@ -15,10 +15,6 @@
 
   networking.hostName = "desktop"; # <-- Reflect changes in network.nix
 
-  # Hyprland / Wayland
-  programs.hyprland.enable = true;
-  environment.variables.WLR_RENDERER = "vulkan"; # AMD Hardware Acceleration
-
   # Define user 'j'
   users.users.j = {
     isNormalUser = true;

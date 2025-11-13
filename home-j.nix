@@ -49,17 +49,6 @@
     pkgs.bolt-launcher
     pkgs.runelite
 
-    # Hyperland-Specific
-    pkgs.hyprpaper # Wallpaper manager
-    pkgs.hypridle # Idle daemon
-    pkgs.hyprlock # Lock screen
-    pkgs.pyprland # Advanced features
-    pkgs.waybar # Status bar
-    pkgs.rofi-wayland # App launcher
-    pkgs.kitty # Terminal
-    pkgs.neofetch # System info / Porn for Linux gooners
-    pkgs.lazygit # Terminal UI for GIT commands
-    pkgs.lazydocker # Terminal UI for Docker
   ];
 
   # === USER-LEVEL PROGRAMS & CONFIG ===
@@ -75,45 +64,6 @@
     extraConfig = {
       credential.helper = "libsecret"; # Saves git config
     };
-  };
-
-  # Hyprland config is built on fish
-  programs.fish.enable = true;
-
-  # Dotfiles (Declaratively Linked)
-  xdg.configFile."hypr" = {
-    source = ./dotfiles/hypr;
-    recursive = true;
-  };
-
-  xdg.configFile."waybar" = {
-    source = ./dotfiles/waybar;
-    recursive = true;
-  };
-
-  xdg.configFile."rofi" = {
-    source = ./dotfiles/rofi;
-    recursive = true;
-  };
-
-  xdg.configFile."fish" = {
-    source = ./dotfiles/fish;
-    recursive = true;
-  };
-
-  xdg.configFile."kitty" = {
-    source = ./dotfiles/kitty;
-    recursive = true;
-  };
-
-  xdg.configFile."neofetch" = {
-    source = ./dotfiles/neofetch;
-    recursive = true;
-  };
-
-  # Hyprland Home-Manager
-  wayland.windowManager.hyprland = {
-    enable = true;
   };
 
   # This installs VSCode and manages its extensions, can be done declaratively I guess
