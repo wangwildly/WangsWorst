@@ -26,11 +26,9 @@
 
 
   # === 4. LAPTOP-SPECIFIC SETTINGS ===
-  services.logind.lidSwitchExternalPower = "ignore";
+  # services.logind.lidSwitchExternalPower = "ignore";
   services.hardware.bolt.enable = true;
   services.power-profiles-daemon.enable = true;
-  hardware.sane.enable = true;
-  hardware.sane.extraBackends = [ pkgs.unfreePackages.brscan5 ];
 
   # Define user 'ju'
   users.users.ju = {
