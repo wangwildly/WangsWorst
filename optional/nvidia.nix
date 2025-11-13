@@ -10,10 +10,8 @@
   };
 
   # This is for OpenGL and 32-bit support for Steam/Whatever
-  hardware.opengl = {
-    enable = true;
-    enable32Bit = true;
-  };
+  hardware.opengl.enable = true;
+
 
   # This tells Xorg/XWayland to use the NVIDIA driver
   services.xserver.videoDrivers = [ "nvidia" ];
