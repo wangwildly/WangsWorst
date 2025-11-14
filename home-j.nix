@@ -7,6 +7,11 @@
   # This should match the stateVersion in your configuration.nix
   home.stateVersion = "25.05";
 
+
+  # This kickstarts user services
+  dconf.enable = true;
+  systemd.user.startServices = true;
+  
   # === USER-LEVEL PACKAGES ===
   # My apps
   home.packages = [

@@ -17,6 +17,16 @@
   networking.hostName = "desktop"; # <-- Reflect changes in network.nix
 
 
+xdg.portal = {
+    enable = true;
+    # Tells the system to use the KDE portal 
+    extraPortals = [ pkgs.xdg-desktop-portal-kde ];
+    
+    config.common.default = "kde";
+  };
+  # WLRoots on Vulkan (Wayfire)
+  environment.variables.WLR_RENDERER = "vulkan";
+
   # Define user 'j'
   users.users.j = {
     isNormalUser = true;
