@@ -8,9 +8,6 @@
   home.stateVersion = "25.05";
 
 
-  # This kickstarts user services
-  dconf.enable = true;
-  systemd.user.startServices = true;
   
   # === USER-LEVEL PACKAGES ===
   # My apps
@@ -37,11 +34,6 @@
     # pkgs.vscode
     # pkgs.git
 
-    # Wayfire Desktop apps
-    pkgs.kitty # Terminal
-    pkgs.wofi # App launcher
-    pkgs.waybar # Status bar
-    pkgs.swaybg # For setting a wallpaper
 
     # Gaming
     pkgs.mangohud
@@ -75,17 +67,6 @@
     extraConfig = {
       credential.helper = "libsecret"; # Saves git config
     };
-  };
-
-  # Wayfire config
-  xdg.configFile."wayfire.ini" = {
-  source = ./dotfiles/wayfire.ini;
-  };
-
-  # Waybar config & style
-  xdg.configFile."waybar" = {
-    source = ./dotfiles/waybar;
-    recursive = true; # Copies entire folder
   };
 
 
