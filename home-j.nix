@@ -201,10 +201,7 @@
       
       # === IDLE CONFIG (hypridle) ===
       # This block configures the hypridle daemon
-      "exec-once" = [
-        "hypridle"
-      ];
-      
+
       "listener" = [
         # Lock screen after 300s (5 mins) of inactivity
         "{timeout, 300, exec, hyprlock}"
