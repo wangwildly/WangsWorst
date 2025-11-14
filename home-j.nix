@@ -93,6 +93,25 @@
     # borderColor = "#88C0D0";
     # borderRadius = 5;
   };
+  
+  # === Hypridle Power Management ===
+  services.hypridle = {
+    enable = true;
+    settings = {
+      general = {
+        lock_cmd = "hyprlock"; # Command to run for locking
+      };
+
+      listener = [
+        # Lock screen after 300s (5 mins) of inactivity
+        { timeout = 300; on-timeout = "hyprlock"; }
+
+        # Turn off monitors after 600s (10 mins)
+        { timeout = 600; on-timeout = "hyprctl dispatch dpms off"; on-resume = "hyprctl dispatch dpms on"; }
+      ];
+    };
+  };
+
 
   # This installs VSCode and manages its extensions, can be done declaratively I guess
   programs.vscode = {
@@ -136,7 +155,6 @@
       "exec-once" = [
         "waybar"
         "hyprpaper"
-        "hypridle"
       ];
       
       # === Keybinds ===
@@ -199,22 +217,8 @@
       
       ];
       
-      # === IDLE CONFIG (hypridle) ===
-      # This block configures the hypridle daemon
-
-      "listener" = [
-        # Lock screen after 300s (5 mins) of inactivity
-        "{timeout, 300, exec, hyprlock}"
-        
-        # Turn off monitors after 600s (10 mins)
-        "{timeout, 600, exec, hyprctl dispatch dpms off}"
-        
-        # Turn monitors back on when you move the mouse
-        "{resume, exec, hyprctl dispatch dpms on}"
-      ];
-    
-
       # Add more settings here as we go...
+
     };
   };
   
