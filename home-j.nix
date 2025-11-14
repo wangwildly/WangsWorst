@@ -36,13 +36,14 @@
     pkgs.kitty      # terminal
     pkgs.wofi       # app launcher
     pkgs.waybar     # status bar
-    pkgs.hyprpaper  # Wallpaper
+    # pkgs.hyprpaper  # Wallpaper
     pkgs.hyprlock # The lock screen
     pkgs.wlogout  # A graphical logout menu
     pkgs.mako          # Notification daemon
     pkgs.grim          # Screenshot tool
     pkgs.slurp         # Screen region selector
     pkgs.pamixer       # Volume control
+    pkgs.wl-clipboard # Clipboard tool for wayland
 
     # Development - Keeping these here and commented out for my education
     # These are currently handled in user-level programs & config, so it manages dotfiles.
@@ -141,6 +142,12 @@
     # ];
   };
 
+  xdg.configFile."wallpapers" = {
+    source = ./dotfiles/wallpapers;
+    recursive = true;
+  };
+
+
   # === WINDOW MANAGER (HYPRLAND) ===
   wayland.windowManager.hyprland = {
     enable = true;
@@ -215,8 +222,28 @@
         ", XF86AudioLowerVolume, exec, pamixer -d 5"
         ", XF86AudioMute, exec, pamixer -t"
       
+
       ];
       
+      # Wallpaper manager
+      programs.wpaperd = {
+          enable = true;
+          settings = {
+            default = {
+            # This is the magic:
+            # '%c' is a special variable for ~/.config
+            # So this points to the wallpaper folder we just linked!
+            path = "%c/wallpapers/";
+        
+            # How often to cycle. "30m" = 30 minutes
+            duration = "30m"; 
+        
+            # Apply to your monitors
+            outputs = [ "DP-2", "DP-3" ];
+          };
+        };
+      };
+
       # Add more settings here as we go...
 
     };
