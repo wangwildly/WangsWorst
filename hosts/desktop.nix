@@ -20,7 +20,7 @@
 xdg.portal = {
     enable = true;
     # Tells the system to use the KDE portal 
-    extraPortals = [ pkgs.xdg-desktop-portal-kde ];
+    extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
     
     config.common.default = "kde";
   };
