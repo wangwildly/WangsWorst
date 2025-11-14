@@ -36,7 +36,7 @@
     pkgs.kitty      # terminal
     pkgs.wofi       # app launcher
     pkgs.waybar     # status bar
-    # pkgs.hyprpaper  # Wallpaper
+    pkgs.hyprpaper  # Wallpaper
     pkgs.hyprlock # The lock screen
     pkgs.wlogout  # A graphical logout menu
     pkgs.mako          # Notification daemon
@@ -142,11 +142,10 @@
     # ];
   };
 
-  xdg.configFile."wallpapers" = {
-    source = ./dotfiles/wallpapers;
+    xdg.configFile."hyprpaper" = {
+    source = ./dotfiles/hyprpaper;
     recursive = true;
   };
-
 
   # === WINDOW MANAGER (HYPRLAND) ===
   wayland.windowManager.hyprland = {
@@ -228,16 +227,6 @@
     };
   };
   
-  programs.wpaperd = {
-    enable = true;
-    settings = {
-      default = {
-        path = "%c/wallpapers/";
-        duration = "30m"; 
-        outputs = [ "DP-2" "DP-3" ];
-      };
-    };
-  };
 
   # === THEMING ===
   # This sets Kvantum to handle QT Style instead of KDE
