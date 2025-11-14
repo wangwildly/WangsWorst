@@ -147,6 +147,11 @@
     recursive = true;
   };
 
+  xdg.configFile."wlogout" = {
+    source = ./dotfiles/wlogout;
+    recursive = true;
+  };
+
   # === WINDOW MANAGER (HYPRLAND) ===
   wayland.windowManager.hyprland = {
     enable = true;
