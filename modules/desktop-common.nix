@@ -6,7 +6,7 @@
 
   # XWayland and support for X-based apps
   xserver.enable = true;
-  services.plasma-portals.enable = true;
+  plasma-portals.enable = true;
   # SDDM
   displayManager.sddm = {
     enable = true;
