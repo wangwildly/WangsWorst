@@ -239,7 +239,7 @@
             duration = "30m"; 
         
             # Apply to your monitors
-            outputs = [ "DP-2", "DP-3" ];
+            outputs = [ "DP-2" "DP-3" ];
           };
         };
       };
