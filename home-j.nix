@@ -33,9 +33,10 @@
     # pkgs.git
 
     # Wayfire Desktop apps
-    pkgs.kitty
-    pkgs.wofi
-    pkgs.waybar
+    pkgs.kitty # Terminal
+    pkgs.wofi # App launcher
+    pkgs.waybar # Status bar
+    pkgs.swaybg # For setting a wallpaper
 
     # Gaming
     pkgs.mangohud
@@ -56,17 +57,6 @@
 
   ];
 
-  # Wayfire config
-  xdg.configFile."wayfire.ini" = {
-  source = ./dotfiles/wayfire.ini;
-  };
-
-  # Waybar config & style
-  xdg.configFile."waybar" = {
-    source = ./dotfiles/waybar;
-    recursive = true; # This command will copy the entire folder
-  };
-
   # === USER-LEVEL PROGRAMS & CONFIG ===
   # Dotfiles and services are managed here
   
@@ -81,6 +71,18 @@
       credential.helper = "libsecret"; # Saves git config
     };
   };
+
+  # Wayfire config
+  xdg.configFile."wayfire.ini" = {
+  source = ./dotfiles/wayfire.ini;
+  };
+
+  # Waybar config & style
+  xdg.configFile."waybar" = {
+    source = ./dotfiles/waybar;
+    recursive = true; # Copies entire folder
+  };
+
 
   # This installs VSCode and manages its extensions, can be done declaratively I guess
   programs.vscode = {
