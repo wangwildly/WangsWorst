@@ -147,29 +147,30 @@
         "$mainMod SHIFT, Up, movewindow, u"
         "$mainMod SHIFT, Down, movewindow, d"
 
-        # --- Workspace Controls (Numpad) ---
-        "$mainMod, KP_1, workspace, 1"
-        "$mainMod, KP_2, workspace, 2"
-        "$mainMod, KP_3, workspace, 3"
-        "$mainMod, KP_4, workspace, 4"
-        "$mainMod, KP_5, workspace, 5"
-        "$mainMod, KP_6, workspace, 6"
-        "$mainMod, KP_7, workspace, 7"
-        "$mainMod, KP_8, workspace, 8"
-        "$mainMod, KP_9, workspace, 9"
-        "$mainMod, KP_0, workspace, 10"
+        # --- Workspace Controls (Numpad by Key Code) ---
+        # This bypasses NumLock issues
+        "$mainMod, code:87, workspace, 1"  # Numpad 1
+        "$mainMod, code:88, workspace, 2"  # Numpad 2
+        "$mainMod, code:89, workspace, 3"  # Numpad 3
+        "$mainMod, code:83, workspace, 4"  # Numpad 4
+        "$mainMod, code:84, workspace, 5"  # Numpad 5
+        "$mainMod, code:85, workspace, 6"  # Numpad 6
+        "$mainMod, code:79, workspace, 7"  # Numpad 7
+        "$mainMod, code:80, workspace, 8"  # Numpad 8
+        "$mainMod, code:81, workspace, 9"  # Numpad 9
+        "$mainMod, code:90, workspace, 10" # Numpad 0
 
-        # --- Move Window to Workspace (Numpad) ---
-        "$mainMod SHIFT, KP_1, movetoworkspace, 1"
-        "$mainMod SHIFT, KP_2, movetoworkspace, 2"
-        "$mainMod SHIFT, KP_3, movetoworkspace, 3"
-        "$mainMod SHIFT, KP_4, movetoworkspace, 4"
-        "$mainMod SHIFT, KP_5, movetoworkspace, 5"
-        "$mainMod SHIFT, KP_6, movetoworkspace, 6"
-        "$mainMod SHIFT, KP_7, movetoworkspace, 7"
-        "$mainMod SHIFT, KP_8, movetoworkspace, 8"
-        "$mainMod SHIFT, KP_9, movetoworkspace, 9"
-        "$mainMod SHIFT, KP_0, movetoworkspace, 10"
+        # --- Move Window to Workspace (Numpad by Key Code) ---
+        "$mainMod SHIFT, code:87, movetoworkspace, 1"
+        "$mainMod SHIFT, code:88, movetoworkspace, 2"
+        "$mainMod SHIFT, code:89, movetoworkspace, 3"
+        "$mainMod SHIFT, code:83, movetoworkspace, 4"
+        "$mainMod SHIFT, code:84, movetoworkspace, 5"
+        "$mainMod SHIFT, code:85, movetoworkspace, 6"
+        "$mainMod SHIFT, code:79, movetoworkspace, 7"
+        "$mainMod SHIFT, code:80, movetoworkspace, 8"
+        "$mainMod SHIFT, code:81, movetoworkspace, 9"
+        "$mainMod SHIFT, code:90, movetoworkspace, 10"
       
       ];
       
