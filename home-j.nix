@@ -222,33 +222,23 @@
         ", XF86AudioLowerVolume, exec, pamixer -d 5"
         ", XF86AudioMute, exec, pamixer -t"
       
-
       ];
-      
-      # Wallpaper manager
-      programs.wpaperd = {
-          enable = true;
-          settings = {
-            default = {
-            # This is the magic:
-            # '%c' is a special variable for ~/.config
-            # So this points to the wallpaper folder we just linked!
-            path = "%c/wallpapers/";
-        
-            # How often to cycle. "30m" = 30 minutes
-            duration = "30m"; 
-        
-            # Apply to your monitors
-            outputs = [ "DP-2" "DP-3" ];
-          };
-        };
-      };
-
-      # Add more settings here as we go...
+        # Add more settings here as we go...
 
     };
   };
   
+  programs.wpaperd = {
+    enable = true;
+    settings = {
+      default = {
+        path = "%c/wallpapers/";
+        duration = "30m"; 
+        outputs = [ "DP-2" "DP-3" ];
+      };
+    };
+  };
+
   # === THEMING ===
   # This sets Kvantum to handle QT Style instead of KDE
   home.sessionVariables = {
