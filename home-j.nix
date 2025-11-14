@@ -39,6 +39,10 @@
     pkgs.hyprpaper  # Wallpaper
     pkgs.hyprlock # The lock screen
     pkgs.wlogout  # A graphical logout menu
+    pkgs.mako          # Notification daemon
+    pkgs.grim          # Screenshot tool
+    pkgs.slurp         # Screen region selector
+    pkgs.pamixer       # Volume control
 
     # Development - Keeping these here and commented out for my education
     # These are currently handled in user-level programs & config, so it manages dotfiles.
@@ -80,6 +84,15 @@
     };
   };
 
+  # === DESKTOP SERVICES ===
+  services.mako = {
+    enable = true;
+    # You can customize it here later
+    # For example:
+    # backgroundColor = "#2E3440";
+    # borderColor = "#88C0D0";
+    # borderRadius = 5;
+  };
 
   # This installs VSCode and manages its extensions, can be done declaratively I guess
   programs.vscode = {
@@ -123,6 +136,7 @@
       "exec-once" = [
         "waybar"
         "hyprpaper"
+        "hypridle"
       ];
       
       # === Keybinds ===
@@ -171,9 +185,38 @@
         "$mainMod SHIFT, code:80, movetoworkspace, 8"
         "$mainMod SHIFT, code:81, movetoworkspace, 9"
         "$mainMod SHIFT, code:90, movetoworkspace, 10"
+
+        # --- Screenshots (grim + slurp) ---
+        # Full screen
+        ", Print, exec, grim - | wl-copy" 
+        # Select region
+        "$mainMod, Print, exec, grim -g \"$(slurp)\" - | wl-copy" 
+
+        # --- Volume Keys (pamixer) ---
+        ", XF86AudioRaiseVolume, exec, pamixer -i 5"
+        ", XF86AudioLowerVolume, exec, pamixer -d 5"
+        ", XF86AudioMute, exec, pamixer -t"
       
       ];
       
+      # === IDLE CONFIG (hypridle) ===
+      # This block configures the hypridle daemon
+      "exec-once" = [
+        "hypridle"
+      ];
+      
+      "listener" = [
+        # Lock screen after 300s (5 mins) of inactivity
+        "{timeout, 300, exec, hyprlock}"
+        
+        # Turn off monitors after 600s (10 mins)
+        "{timeout, 600, exec, hyprctl dispatch dpms off}"
+        
+        # Turn monitors back on when you move the mouse
+        "{resume, exec, hyprctl dispatch dpms on}"
+      ];
+    
+
       # Add more settings here as we go...
     };
   };
