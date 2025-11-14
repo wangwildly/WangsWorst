@@ -137,39 +137,39 @@
         "$mainMod, M, exec, wlogout"              # Logout menu
         
         # --- Window Movement ---
-        "$mainMod, h, movefocus, l"
-        "$mainMod, l, movefocus, r"
-        "$mainMod, k, movefocus, u"
-        "$mainMod, j, movefocus, d"
+        "$mainMod, Left, movefocus, l"
+        "$mainMod, Right, movefocus, r"
+        "$mainMod, Up, movefocus, u"
+        "$mainMod, Down, movefocus, d"
         
-        "$mainMod SHIFT, h, movewindow, l"
-        "$mainMod SHIFT, l, movewindow, r"
-        "$mainMod SHIFT, k, movewindow, u"
-        "$mainMod SHIFT, j, movewindow, d"
+        "$mainMod SHIFT, Left, movewindow, l"
+        "$mainMod SHIFT, Right, movewindow, r"
+        "$mainMod SHIFT, Up, movewindow, u"
+        "$mainMod SHIFT, Down, movewindow, d"
 
-        # --- Workspace Controls ---
-        "$mainMod, 1, workspace, 1"
-        "$mainMod, 2, workspace, 2"
-        "$mainMod, 3, workspace, 3"
-        "$mainMod, 4, workspace, 4"
-        "$mainMod, 5, workspace, 5"
-        "$mainMod, 6, workspace, 6"
-        "$mainMod, 7, workspace, 7"
-        "$mainMod, 8, workspace, 8"
-        "$mainMod, 9, workspace, 9"
-        "$mainMod, 0, workspace, 10"
+        # --- Workspace Controls (Numpad) ---
+        "$mainMod, KP_1, workspace, 1"
+        "$mainMod, KP_2, workspace, 2"
+        "$mainMod, KP_3, workspace, 3"
+        "$mainMod, KP_4, workspace, 4"
+        "$mainMod, KP_5, workspace, 5"
+        "$mainMod, KP_6, workspace, 6"
+        "$mainMod, KP_7, workspace, 7"
+        "$mainMod, KP_8, workspace, 8"
+        "$mainMod, KP_9, workspace, 9"
+        "$mainMod, KP_0, workspace, 10"
 
-        # --- Move Window to Workspace ---
-        "$mainMod SHIFT, 1, movetoworkspace, 1"
-        "$mainMod SHIFT, 2, movetoworkspace, 2"
-        "$mainMod SHIFT, 3, movetoworkspace, 3"
-        "$mainMod SHIFT, 4, movetoworkspace, 4"
-        "$mainMod SHIFT, 5, movetoworkspace, 5"
-        "$mainMod SHIFT, 6, movetoworkspace, 6"
-        "$mainMod SHIFT, 7, movetoworkspace, 7"
-        "$mainMod SHIFT, 8, movetoworkspace, 8"
-        "$mainMod SHIFT, 9, movetoworkspace, 9"
-        "$mainMod SHIFT, 0, movetoworkspace, 10"
+        # --- Move Window to Workspace (Numpad) ---
+        "$mainMod SHIFT, KP_1, movetoworkspace, 1"
+        "$mainMod SHIFT, KP_2, movetoworkspace, 2"
+        "$mainMod SHIFT, KP_3, movetoworkspace, 3"
+        "$mainMod SHIFT, KP_4, movetoworkspace, 4"
+        "$mainMod SHIFT, KP_5, movetoworkspace, 5"
+        "$mainMod SHIFT, KP_6, movetoworkspace, 6"
+        "$mainMod SHIFT, KP_7, movetoworkspace, 7"
+        "$mainMod SHIFT, KP_8, movetoworkspace, 8"
+        "$mainMod SHIFT, KP_9, movetoworkspace, 9"
+        "$mainMod SHIFT, KP_0, movetoworkspace, 10"
       
       ];
       
