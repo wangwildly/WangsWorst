@@ -166,6 +166,8 @@
       "exec-once" = [
         "waybar"
         "hyprpaper"
+
+        "/usr/lib/polkit-kde-authentication-agent-1"
       ];
       
       # === Keybinds ===
