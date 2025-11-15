@@ -21,7 +21,7 @@
     "flake-utils": {
       "inputs": {
         "systems": [
-          "mangowc",
+          "mango",
           "scenefx",
           "systems"
         ]
@@ -61,7 +61,7 @@
         "type": "github"
       }
     },
-    "mangowc": {
+    "mango": {
       "inputs": {
         "flake-parts": "flake-parts",
         "nixpkgs": [
@@ -70,16 +70,16 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1763172531,
-        "narHash": "sha256-PSr9ehDgzcn1M9aRCxhSA9OLtQH3pfkjKlmv652ISbc=",
+        "lastModified": 1763174976,
+        "narHash": "sha256-1AdRW9PdoRChnB33YQedIT44z8DJ3Y2TjkeGYeqkKNk=",
         "owner": "DreamMaoMao",
-        "repo": "mangowc",
-        "rev": "7295755d0eb9649fae0862a77a8268ca5ac4f46a",
+        "repo": "mango",
+        "rev": "0173afb16a5b6a908c43f8104f79ca2885153b6c",
         "type": "github"
       },
       "original": {
         "owner": "DreamMaoMao",
-        "repo": "mangowc",
+        "repo": "mango",
         "type": "github"
       }
     },
@@ -117,7 +117,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "mangowc": "mangowc",
+        "mango": "mango",
         "nixpkgs": "nixpkgs"
       }
     },
@@ -125,7 +125,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "mangowc",
+          "mango",
           "nixpkgs"
         ],
         "systems": "systems"

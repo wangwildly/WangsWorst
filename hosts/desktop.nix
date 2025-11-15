@@ -16,7 +16,7 @@
   networking.hostName = "desktop"; # <-- Reflect changes in network.nix
 
   # === MangoWC ===
-  programs.mangowc.enable = true;
+  programs.mango.enable = true;
   environment.variables.WLR_RENDERER = "vulkan";
   # If I have any problems, delete this first, I don't trust this fucker
   xdg.portal = {
