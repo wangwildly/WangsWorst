@@ -16,19 +16,6 @@
   networking.hostName = "desktop"; # <-- Reflect changes in network.nix
 
 
-programs.hyprland.enable = true;
-  
-  # Portal bullshit
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
-    config.common.default = "kde";
-  };
-  
-  # hardware acceleration
-  environment.variables.WLR_RENDERER = "vulkan";
-
-
   # Define user 'j'
   users.users.j = {
     isNormalUser = true;
