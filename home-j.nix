@@ -111,8 +111,12 @@
   wayland.windowManager.mango = {
     enable = true;
     # We start with a blank config, just like he shows
-    settings = ''
-      # We will put our custom settings here later
+settings = ''
+      # Set our "Super" key as the main modifier
+      $mod = SUPER
+      
+      # Bind Super + T to open the 'foot' terminal
+      bind = $mod, T, exec, foot
     '';
     autostart_sh = ''
       # We will put our autostart commands here
