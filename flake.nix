@@ -7,16 +7,16 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #MangoWC
-    mangowc = {
-      url = "github:DreamMaoMao/mangowc";
+
+    # Use the new 'mango' repo ===
+    mango = {
+      url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-
-  
-  outputs = { self, nixpkgs, home-manager, mangowc, ... }: {
+  # Add 'mango' to the arguments ===
+outputs = { self, nixpkgs, home-manager, mango, ... }: {
 
     # === NixOS Hosts ===
     nixosConfigurations = {
@@ -24,16 +24,27 @@
       # --- Desktop ---
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit self; };
+        specialArgs = { inherit self; }; # This is correct
         modules = [
           ./hosts/desktop.nix
-          mangowc.nixosModules.default
+          
+          mango.nixosModules.mango 
+
+          # --- Home Manager Config ---
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.j = import ./home-j.nix;
             home-manager.backupFileExtension = "backup";
+            
+            # === Import HM module for user 'j' ===
+            home-manager.users.j = {
+              imports = [ 
+                ./home-j.nix
+                mango.hmModules.mango
+              ];
+            };
           }
+          
         ];
       };
 
@@ -43,4 +54,4 @@
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
 
   }; # Closes outputs
-} # Closes the entire file
+}

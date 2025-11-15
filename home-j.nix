@@ -7,6 +7,9 @@
   # This should match the stateVersion in your configuration.nix
   home.stateVersion = "25.05";
 
+  #dconf.enable = true;
+  #systemd.user.startServices = true;
+
   # === USER-LEVEL PACKAGES ===
   # My apps
   home.packages = [
@@ -105,7 +108,18 @@
     # ];
   };
   
-
+  # === WINDOW MANAGER (MANGO) ===
+  # This block is now available because of our flake.nix change
+  wayland.windowManager.mango = {
+    enable = true;
+    # We start with a blank config, just like he shows
+    settings = ''
+      # We will put our custom settings here later
+    '';
+    autostart_sh = ''
+      # We will put our autostart commands here
+    '';
+  };
 
   # === THEMING ===
   # This sets Kvantum to handle QT Style instead of KDE
