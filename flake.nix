@@ -7,10 +7,16 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    #MangoWC
+    mangowc = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
+
   
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, home-manager, mangowc, ... }: {
 
     # === NixOS Hosts ===
     nixosConfigurations = {
@@ -21,6 +27,7 @@
         specialArgs = { inherit self; };
         modules = [
           ./hosts/desktop.nix
+          mangowc.nixosModules.default
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

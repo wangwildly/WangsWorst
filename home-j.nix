@@ -27,6 +27,15 @@
     pkgs.fastfetch
     pkgs.libsecret
 
+    # === MANGO DESKTOP APPS ===
+    pkgs.foot
+    pkgs.wmenu
+    pkgs.wl-clipboard
+    pkgs.grim
+    pkgs.slurp
+    pkgs.swaybg
+    pkgs.nerd-fonts.jetbrains-mono
+
     # Development - Keeping these here and commented out for my education
     # These are currently handled in user-level programs & config, so it manages dotfiles.
     # pkgs.vscode
@@ -96,6 +105,7 @@
     # ];
   };
   
+
 
   # === THEMING ===
   # This sets Kvantum to handle QT Style instead of KDE
