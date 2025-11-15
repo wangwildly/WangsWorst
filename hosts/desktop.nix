@@ -18,12 +18,6 @@
   # === MangoWC ===
   programs.mango.enable = true;
   environment.variables.WLR_RENDERER = "vulkan";
-  # If I have any problems, delete this first, I don't trust this fucker
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
-    config.common.default = "kde";
-  };
 
   # Define user 'j'
   users.users.j = {
